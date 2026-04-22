@@ -38,6 +38,42 @@ export default function Contact() {
                 </a>
               ))}
             </div>
+            {/* Contact Form */}
+<form className="mt-10 w-full max-w-xl space-y-6">
+  <div className="flex flex-col">
+    <label className="text-sm text-zinc-400 mb-2">Name</label>
+    <input
+      type="text"
+      placeholder="Your Name"
+      className="px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-lg focus:outline-none focus:border-indigo-500 transition-colors text-white"
+    />
+  </div>
+
+  <div className="flex flex-col">
+    <label className="text-sm text-zinc-400 mb-2">Email</label>
+    <input
+      type="email"
+      placeholder="your@email.com"
+      className="px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-lg focus:outline-none focus:border-indigo-500 transition-colors text-white"
+    />
+  </div>
+
+  <div className="flex flex-col">
+    <label className="text-sm text-zinc-400 mb-2">Message</label>
+    <textarea
+      rows={4}
+      placeholder="Your message..."
+      className="px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-lg focus:outline-none focus:border-indigo-500 transition-colors text-white resize-none"
+    />
+  </div>
+
+  <button
+    type="submit"
+    className="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 rounded-lg text-white font-bold uppercase tracking-wider transition-colors"
+  >
+    Send Message
+  </button>
+</form>
           </div>
 
           <Avatar 
