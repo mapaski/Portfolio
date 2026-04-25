@@ -10,8 +10,13 @@ export default function Contact() {
   return (
     <footer id="contact" ref={ref} className="relative py-24 px-6 md:px-12 flex flex-col items-center justify-center bg-zinc-950 overflow-hidden border-t border-zinc-900">
       <div className="max-w-6xl mx-auto w-full space-y-16">
+
+        {/* Top section: left col + avatar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+
+          {/* Left column */}
           <div className="space-y-8 text-center md:text-left">
+
             <div className="space-y-4">
               <h2 className="text-5xl md:text-8xl font-black font-display tracking-tight">
                 LET'S <span className="text-indigo-500 text-gradient">CONNECT</span>
@@ -21,13 +26,14 @@ export default function Contact() {
               </p>
             </div>
 
+            {/* Social links */}
             <div className="flex flex-wrap justify-center md:justify-start gap-6">
               {[
                 { icon: Mail, label: "Email", href: "mailto:manaswimis29@gmail.com" },
                 { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/mapaski" },
                 { icon: Instagram, label: "Instagram", href: "https://instagram.com/mapaski" },
               ].map((social) => (
-                <a
+                
                   key={social.label}
                   href={social.href}
                   className="group flex items-center gap-3 px-6 py-3 bg-zinc-900 border border-zinc-800 rounded-full text-zinc-400 hover:text-white hover:border-indigo-500 transition-all"
@@ -38,51 +44,59 @@ export default function Contact() {
                 </a>
               ))}
             </div>
+
             {/* Contact Form */}
-<div className="mt-10 w-full max-w-xl space-y-6">
-  <div className="flex flex-col">
-    <label className="text-sm text-zinc-400 mb-2">Name</label>
-    <input
-      type="text"
-      placeholder="Your Name"
-      className="px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-lg focus:outline-none focus:border-indigo-500 transition-colors text-white"
-    />
-  </div>
+            <div className="mt-10 w-full max-w-xl space-y-6">
+              <div className="flex flex-col">
+                <label className="text-sm text-zinc-400 mb-2">Name</label>
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  className="px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-lg focus:outline-none focus:border-indigo-500 transition-colors text-white"
+                />
+              </div>
 
-  <div className="flex flex-col">
-    <label className="text-sm text-zinc-400 mb-2">Email</label>
-    <input
-      type="email"
-      placeholder="your@email.com"
-      className="px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-lg focus:outline-none focus:border-indigo-500 transition-colors text-white"
-    />
-  </div>
+              <div className="flex flex-col">
+                <label className="text-sm text-zinc-400 mb-2">Email</label>
+                <input
+                  type="email"
+                  placeholder="your@email.com"
+                  className="px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-lg focus:outline-none focus:border-indigo-500 transition-colors text-white"
+                />
+              </div>
 
-  <div className="flex flex-col">
-    <label className="text-sm text-zinc-400 mb-2">Message</label>
-    <textarea
-      rows={4}
-      placeholder="Your message..."
-      className="px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-lg focus:outline-none focus:border-indigo-500 transition-colors text-white resize-none"
-    />
-  </div>
+              <div className="flex flex-col">
+                <label className="text-sm text-zinc-400 mb-2">Message</label>
+                <textarea
+                  rows={4}
+                  placeholder="Your message..."
+                  className="px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-lg focus:outline-none focus:border-indigo-500 transition-colors text-white resize-none"
+                />
+              </div>
 
-  <button
-    type="button"
-    onClick={() => {/* handle submit */}}
-    className="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 rounded-lg text-white font-bold uppercase tracking-wider transition-colors"
-  >
-    Send Message
-  </button>
-</div>
+              <button
+                type="button"
+                onClick={() => {}}
+                className="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 rounded-lg text-white font-bold uppercase tracking-wider transition-colors"
+              >
+                Send Message
+              </button>
+            </div>
 
-          <Avatar 
-            size="lg" 
-            pose="playful" 
+          </div>
+          {/* End left column */}
+
+          {/* Right column: Avatar */}
+          <Avatar
+            size="lg"
+            pose="playful"
             message={isInView ? "Thanks for stopping by! Let's build something cool." : ""}
           />
-        </div>
 
+        </div>
+        {/* End top section */}
+
+        {/* Footer bar */}
         <div className="pt-16 border-t border-zinc-900 flex flex-col md:flex-row items-center justify-between gap-8 text-zinc-500 font-mono text-[10px] uppercase tracking-[0.2em]">
           <p>© 2026 Manaswi Mishra. All rights reserved.</p>
           <div className="flex gap-8">
@@ -91,6 +105,7 @@ export default function Contact() {
           </div>
           <p>Designed with curiosity.</p>
         </div>
+
       </div>
 
       {/* Background Accents */}
