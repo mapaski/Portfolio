@@ -39,7 +39,7 @@ export default function Contact() {
               ))}
             </div>
             {/* Contact Form */}
-<form className="mt-10 w-full max-w-xl space-y-6">
+<div className="mt-10 w-full max-w-xl space-y-6">
   <div className="flex flex-col">
     <label className="text-sm text-zinc-400 mb-2">Name</label>
     <input
@@ -68,13 +68,13 @@ export default function Contact() {
   </div>
 
   <button
-    type="submit"
+    type="button"
+    onClick={() => {/* handle submit */}}
     className="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 rounded-lg text-white font-bold uppercase tracking-wider transition-colors"
   >
     Send Message
   </button>
-</form>
-          </div>
+</div>
 
           <Avatar 
             size="lg" 
