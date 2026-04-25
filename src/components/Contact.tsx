@@ -34,6 +34,7 @@ export default function Contact() {
                 { icon: Instagram, label: "Instagram", href: "https://instagram.com/mapaski" },
               ].map((social) => (
                 
+                <a
                   key={social.label}
                   href={social.href}
                   className="group flex items-center gap-3 px-6 py-3 bg-zinc-900 border border-zinc-800 rounded-full text-zinc-400 hover:text-white hover:border-indigo-500 transition-all"
